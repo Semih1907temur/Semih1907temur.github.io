@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAKKIMDA</title>
+</head>
+<style>
+body{
+background-color: #202020;
+
+}
+
+.semih-top-menu-header{
+    /* Bu Kısıma ekliyeceğim kodlar ana divi etkileyecek */
+    /* Flex yapışık ekran demek şimdi göreceğin üzere */
+    display:flex;
+    /*Şimdi menüyü sağa logoyu sola yaslıyalım*/
+    justify-content: space-around;
+    /* Dikeyde de ortalayalım */
+    align-items: center;
+    
+    border-bottom: 5px solid rgb(137, 31, 31);
+padding: 5px;
+
+}
+#ss{
+width: 100px;
+height: auto;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.semih-link:hover{
+    font-size: 18px;
+    border-right: none;
+    border-top: 2px solid #d5d5d5;
+    background-color:red;
+    transition: all 1s;
+}
+.semih-link{
+    border-right: 2px solid #d5d5d5;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    transition: all 1s;
+}
+#semih{
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    transition: all 1s;
+
+
+}
+#semih:hover{
+    font-size: 18px;
+    border-right: none;
+    border-top: 2px solid #d5d5d5;
+    background-color:red;
+    transition: all 1s;
+}
+pre{
+    color:rgb(129, 18, 18);
+    font-size: 15px;
+}
+
+
+.semih-resim{
+    position: static;
+}
+pre{
+    font-size: 20px;
+}
+</style>
+<body>
+    <!-- Bu kısımda ilk başta ekranı ayarlıyoruz.-->
+<div  class="semih-top-menu-header">
+
+    <!--Bu Kısım Logo İçin-->
+    <div>
+        <!--Logo Gelecek-->
+        <img id="ss"src="logo.d80bb302.png"/> <pre> Semih Temur Yazılım Mühendisi </pre>
+    </div>
+    <div class="semih-top-menu">
+        <!--Menü Gelecek-->
+        <a class="semih-link" href="anasayfa.html">Anasayfa</a>
+        <a class="semih-link" href="hakkimda.html">Hakkımda</a>
+        <a class="semih-link" href="projelerim.html">Projelerim</a>
+        <a id="semih" href="iletisim.html">İletisim</a>
+    </div>
+</div>
+<div class="body">
+    <div class="semih-resim">
+     <pre> Merhaba Ben Semih Temur 2003 yılının  Mart ayında Malatyada dogdum. ilkokul ve orta okulu 
+         Türkiyem Orta Okulunda Liseyı Malatya Kultur Kolejınde okudum ve 2021 Yılında İNÖNÜ ÜNİVERSİTESİ YAZILIM Muhendıslıgını kazandım 
+         Yazılım harıcınde spora yapmayı severım bildigim diller ingilizce ve Türkçedir.  </pre>
+    </div>
+</div>
+
+</body>
+
+</html>
