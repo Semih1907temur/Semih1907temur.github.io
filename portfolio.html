@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJELERIM</title>
+</head>
+<style>
+body{
+background-color: #202020;
+
+}
+
+.semih-top-menu-header{
+    margin-top: 40px;
+        display:flex;
+   justify-content: center;
+    
+
+}
+
+
+
+
+
+.semih-link:hover{
+    font-size: 18px;
+        border-right: none;
+        border-top: 2px solid #d5d5d5;
+        background-color:red;
+        transition: all 1s;
+}
+.semih-link{
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    transition: all 1s;
+}
+#semih{
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    transition: all 1s;
+
+
+}
+#semih:hover{
+    font-size: 18px;
+    border-right: none;
+    border-top: 2px solid #d5d5d5;
+    background-color:red;
+    transition: all 1s;
+}
+button{
+width: 100px;
+height: 40px;
+}
+h1{
+    color: white;
+    padding-right: 2%;
+    margin-top: 0.2%;
+}
+#ty{
+display: flex;
+margin-left: 45%;
+margin-top: 12%;;
+
+}
+#semh{
+display: flex;
+margin-top: -4%;
+margin-left: 30%;
+}
+</style>
+<body>
+  
+<div  class="semih-top-menu-header">
+
+    
+
+    <div class="semih-top-menu">
+       
+        <a class="semih-link" href="anasayfa.html">Anasayfa</a>
+        <a class="semih-link" href="hakkimda.html">Hakkımda</a>
+        <a class="semih-link" href="portfolio.html"> Portfolio </a>
+        <a id="semih" href="iletisim.html">İletisim</a>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.2.3/jspdf.plugin.autotable.min.js"></script>
+<div id="ty"> 
+<h1> Projelerim:</h1>
+<button id="button"> Projelerim indir</button>
+</div>
+<div  id="semh">
+<h1>CV:</h1>
+<button onclick="tıkla()" id="btn">CV indir</button>
+</div>
+ <script> 
+let button=document.getElementById("button");
+button.addEventListener("click",(e) =>{ 
+let doc=new  jsPDF();
+doc.autoTable({
+
+
+head:[['Proje','Tarih','Dil']],
+body:[['bagliliste','Mart','C'],['animate','Nisan','javascript'],['hesap makinesi','ocak','javascript']]
+
+
+}) 
+doc.save("projelerım.pdf")
+})
+  
+</script>
+<script>
+    function tıkla(){  
+let users=[
+    { isim:"Semih",yaş:19,doğum:"Malatyaliyim" }
+];
+var doc=new  jsPDF();
+users.forEach(function(user,i){
+doc.text(50,10+i*10,"Adim:"+user.isim+" yasim"+ user.yaş+" "+user.doğum)
+})
+doc.save("cv.pdf");
+    }
+</script>
+
+</body>
+
+</html>
